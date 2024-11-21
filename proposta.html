@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceita Ser Maine Katzchen?</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 24px;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+
+        .error-message {
+            color: #ff6347; /* Cor de alerta */
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Você aceita novamente ser "Maine Katzchen"?</h1>
+        
+        <button id="acceptButton">Sim, Aceito!</button>
+        <button id="rejectButton">Não, Não Aceito</button>
+        
+        <p class="quote">“O amor é a base de tudo.” - Maine Katzchen</p>
+
+        <!-- Mensagem de erro quando o botão de rejeição é clicado -->
+        <p id="errorMessage" class="error-message" style="display: none;">Resposta errada, não vou desistir de você!</p>
+    </div>
+
+    <script>
+        // Função para aceitar a resposta positiva
+        document.getElementById("acceptButton").addEventListener("click", function() {
+            alert("Você aceitou ser 'Maine Katzchen' novamente! Bem-vindo!");
+            // Redirecionamento ou outra ação
+            window.location.href = "index.html";  // Redireciona para a página inicial ou outra página desejada
+        });
+
+        // Função para lidar com a rejeição, mostrando a mensagem de erro
+        document.getElementById("rejectButton").addEventListener("click", function() {
+            // Exibe mensagem de erro
+            document.getElementById("errorMessage").style.display = "block";
+            // Não desabilita o botão, permitindo nova tentativa
+        });
+    </script>
+
+</body>
+</html>
